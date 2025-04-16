@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Medical Student Page</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #0d6efd;
+      color: white;
+      padding: 1rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Main Layout using Flexbox */
+    .container {
+      display: flex;
+      padding: 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1 1 300px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f9f9f9;
+    }
+
+    .card h2 {
+      color: #0d6efd;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Students</a></li>
+      <li><a href="#">Food</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="container">
+    <div class="card">
+      <h2>Medical Student</h2>
+      <p>Name: Zara</p>
+      <p>Year: 2nd</p>
+      <p>School: University of Lagos</p>
+      <p>GPA: 3.8</p>
+    </div>
+
+    <div class="card">
+      <h2>Clinical Student</h2>
+      <p>Name: Ahmed</p>
+      <p>Year: 5th</p>
+      <p>Rotation: Obstetrics & Gynecology</p>
+      <p>GPA: 3.5</p>
+    </div>
+
+    <div class="card">
+      <h2>Food Styles</h2>
+      <ul>
+        <li>Pizza – Eaten with hands</li>
+        <li>Soup – Sipped with spoon</li>
+        <li>Ice Cream – Licked from cone</li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+  </html>
